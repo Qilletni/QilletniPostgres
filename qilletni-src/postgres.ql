@@ -3,8 +3,19 @@
   */
 entity Database {
 
+    /**
+     * The full connection URL.
+     */
     string url
+
+    /**
+     * The username used to connect to the database.
+     */
     string username
+
+    /**
+     * The password used to connect to the database.
+     */
     string password
 
     Database(url, username, password)
@@ -80,6 +91,9 @@ entity PreparedStatement {
     native fun close()
 }
 
+/**
+ * A connection object.
+ */
 entity Connection {
 
     /**
@@ -176,18 +190,31 @@ entity Connection {
 }
 
 /**
- * Metadata for the result of a query.
+ * Column metadata for the result of a query.
  */
 entity ResultMetadata {
 
+    /**
+     * An ordered list of the names of columns returned.
+     */
     string[] columnNames
+
+    /**
+     * An ordered list of the labels of columns returned.
+     */
     string[] columnLabels
     
     ResultMetadata(columnNames, columnLabels)
 }
 
+/**
+ * A set of results from a database query.
+ */
 entity ResultSet {
-    
+
+    /**
+     * Metadata for this ResultSet.
+     */
     ResultMetadata metadata
     
     /**

@@ -1,6 +1,7 @@
-name: postgres
-version: 1.0.0
+name: qilletni/postgres
+version: 1.0.0-SNAPSHOT
 author: Adam Yarris
+description: Postgres database functions for Qilletni.
 native_classes:
   - dev.qilletni.lib.postgres.ConnectionFunctions
   - dev.qilletni.lib.postgres.DatabaseFunctions
