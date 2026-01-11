@@ -1,5 +1,5 @@
 name: qilletni/postgres
-version: 1.0.0-SNAPSHOT
+version: 1.0.0
 author: Adam Yarris
 description: Postgres database functions for Qilletni.
 native_classes:
