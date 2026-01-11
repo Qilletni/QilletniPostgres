@@ -1,6 +1,6 @@
 /**
-  * An entity for interacting with a PostgreSQL database.
-  */
+ * An entity for interacting with a PostgreSQL database.
+ */
 entity Database {
 
     /**
@@ -262,16 +262,26 @@ entity ResultSet {
  * The result of a database operation that retrieves data.
  */
 entity Result {
-    
-    // The error code of the result, 0 if success
-    // Values:
-    //   0: Success
-    //   1: No rows returned
-    //   10: SQL Exception
-    //   98: Timeout
-    //   99: Database disconnected
+
+    /**
+     * The error code of the result, 0 if success
+     * Values:
+     *   0: Success
+     *   1: No rows returned
+     *   10: SQL Exception
+     *   98: Timeout
+     *   99: Database disconnected
+     */
     int errorCode
+
+    /**
+     * The value of the result, present if the operation was a success.
+     */
     Optional value
+
+    /**
+     * The error message, if `errorCode` is an error
+     */
     string message
     
     Result(errorCode, value, message)
